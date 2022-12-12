@@ -16,3 +16,6 @@ const workoutSchema = new Schema({
         required: true
     }
 }, { timestamps: true})
+
+// here use singular as later on it's going to pluralise this to create a workout collection for us automatically
+module.exports = mongoose.model('Workout', workoutSchema)
