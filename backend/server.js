@@ -8,6 +8,7 @@ const port = process.env.PORT || 7000;
 
 // middleware
 app.use(express.json())
+
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
