@@ -1,5 +1,5 @@
 import React from 'react'
-import {useWorkoutsContext} from '../hooks/useWorkoutsContext'
+// import {useWorkoutsContext} from '../hooks/useWorkoutsContext'
 
 
 const WorkoutDetails = ({ workout }) => {
