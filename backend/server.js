@@ -1,6 +1,7 @@
 const express = require("express");
 require('dotenv').config()
 const workoutRoutes = require("./routes/workouts");
+const userRoutes = require("./routes/user")
 const mongoose = require("mongoose");
 
 const app = express();
@@ -18,10 +19,8 @@ app.use((req, res, next) => {
 // routes
 app.use("/api/workouts", workoutRoutes)
 
-// ---- should i put here or after?
-// server.use((err, req, res, next) => {
-//   return res.status(500).send(`<h2>${err.message}</h2>`);
-// });
+app.use('/api/user', userRoutes)
+
 
 
 //connect to db
