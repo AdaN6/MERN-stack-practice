@@ -1,13 +1,15 @@
-// login user
+const User = require("../models/userModel");
+
+// ---> login user
 
 const loginUser = async (req, res) => {
-    res.json({msg:"login User"})
-}
+  res.json({ mssg: "login user" });
+};
 
-//signup user
+// ---> signup user
 
-const signUpUser = async (req, res) => {
-    res.json({msg: 'signup user'})
-}
+const signupUser = async (req, res) => {
+  res.json({ mssg: "signup user" });
+};
 
-module.exports = {loginUser, signUpUser}
+module.exports = { signupUser, loginUser };
