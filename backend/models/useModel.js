@@ -29,6 +29,8 @@ userSchema.static.signup = async(email, password) => {
   const hash = await bycrypt.hash(password, salt)
 
   const user = await this.create({email, password: hash});
+
+  return user
 }
 
 module.exports = mongoose.model("User", userSchema);
