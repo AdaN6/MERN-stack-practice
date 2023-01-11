@@ -17,20 +17,19 @@ const userSchema = new Schema({
 
 // static signup method
 
-userSchema.static.signup = async function(email, password) {
-
-  const exist = await this.findOne({email})
+userSchema.statics.signup = async function (email, password) {
+  const exist = await this.findOne({ email });
 
   if (exist) {
-    throw Error('Email already in use')
+    throw Error("Email already in use");
   }
 
-  const salt = await bcrypt.genSalt(10)
-  const hash = await bycrypt.hash(password, salt)
+  const salt = await bcrypt.genSalt(10);
+  const hash = await bcrypt.hash(password, salt);
 
-  const user = await this.create({email, password: hash});
+  const user = await this.create({ email, password: hash });
 
-  return user
+  return user;
 }
 
 module.exports = mongoose.model("User", userSchema);
