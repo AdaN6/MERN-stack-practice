@@ -4,7 +4,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 
 const WorkoutForm = () => {
     const {dispatch} = useWorkoutsContext();
-    const {user} = useAuthContext
+    const {user} = useAuthContext();
     const [title, setTitle] = useState('');
     const [load, setLoad] = useState('');
     const [reps, setReps] = useState('');

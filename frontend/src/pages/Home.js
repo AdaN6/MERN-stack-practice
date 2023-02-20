@@ -10,8 +10,8 @@ const Home = () => {
 // ---> phase one useState
   // const [workouts, setWorkouts] = useState(null)
 // ---> phase two using useContext
-const {workouts, dispatch} = useWorkoutsContext()
-const {user} = useAuthContext
+const {workouts, dispatch} = useWorkoutsContext();
+const {user} = useAuthContext();
 
   useEffect(() => {
     const fetchWorkouts = async () => {
