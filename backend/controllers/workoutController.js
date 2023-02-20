@@ -3,8 +3,11 @@ const mongoose = require("mongoose")
 
 // --- GET ALL WORKOUTS
 const getWorkouts = async (req, res) => {
+    const user_id = req.user._id
+
     // sort -1 is decending order
-    const workouts = await Workout.find({}).sort({createdAt: -1})
+    // find user_id in order to list the workout for specific user
+    const workouts = await Workout.find({user_id}).sort({createdAt: -1})
 
     res.json(workouts)
 }
