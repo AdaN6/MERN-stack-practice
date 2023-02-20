@@ -14,7 +14,12 @@ const workoutSchema = new Schema({
     load: {
         type: Number,
         required: true
+    },
+    user_id: {
+        type: String,
+        required: true
     }
+
 }, { timestamps: true})
 
 // here use singular as later on it's going to pluralise this to create a workout collection for us automatically
