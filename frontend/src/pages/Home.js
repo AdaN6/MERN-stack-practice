@@ -16,7 +16,7 @@ const {user} = useAuthContext();
   useEffect(() => {
     const fetchWorkouts = async () => {
       const response = await fetch('/api/workouts', {
-        hearders: {
+        headers: {
           'Authorization' : `Bearer ${user.token}`
         }
       })
